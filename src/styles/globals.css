@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer components {
+  .title-question {
+    @apply font-semibold font-customFont leading-7 text-2xl mb-5;
+  }
+
+  .description_question {
+    @apply font-customFont font-medium leading-5 mb-8;
+  }
+
+  .btn-success,
+  .btn-error,
+  .btn-fake {
+    @apply rounded-3xl font-customFont font-bold text-lg leading-5 py-3 px-6;
+  }
+
+  .btn-success {
+    @apply bg-green-900;
+  }
+
+  .btn-error {
+    @apply bg-red-800;
+  }
+
+  .btn-fake {
+    @apply bg-yellow-500;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  background: #f2f4f8;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+@media (max-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
+import "../styles/icones.css";
 
 import { RiMenu2Line } from "react-icons/ri";
 import InfoUser from "@/components/InfoUser";
+import { FormProvider } from "@/context/formContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,18 +22,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="bg-blue-900 h-80 px-4">
-          <div className="w-full h-20 flex justify-between items.center">
-            <div className="flex flex-row items-center">
-              <RiMenu2Line className=" w-5 h-5 text-gray-200 mr-4" />{" "}
-              <h1 className="text-gray-200 font-bold text-2xl">
-                Sua <span className="text-yellow-500"> Logo </span>
-              </h1>
+        <FormProvider>
+          <header className="bg-blue-900 h-80 px-4">
+            <div className="w-full h-20 flex justify-between items.center">
+              <div className="flex flex-row items-center">
+                <RiMenu2Line className=" w-5 h-5 text-gray-200 mr-4" />{" "}
+                <h1 className="text-gray-200 font-bold text-2xl">
+                  Sua <span className="text-yellow-500"> Logo </span>
+                </h1>
+              </div>
+              <InfoUser />
             </div>
-            <InfoUser />
-          </div>
-        </header>
-        {children}
+          </header>
+          {children}
+        </FormProvider>
       </body>
     </html>
   );

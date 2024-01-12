@@ -1,0 +1,27 @@
+.star-icon {
+  border: 1px solid #ffff;
+
+  cursor: pointer;
+
+  color: #ffb800;
+
+  font-size: 32px;
+
+  transition: 1s ease;
+}
+
+.star-icon::before {
+  content: "\2605"; /*Cheio*/
+}
+
+.star-icon.active ~ .star-icon::before {
+  content: "\2606"; /*Vazio*/
+}
+
+.assessment:hover .star-icon::before {
+  content: "\2605";
+}
+
+.star-icon:hover ~ .star-icon::before {
+  content: "\2606"; /*Cheio*/
+}
