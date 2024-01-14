@@ -27,4 +27,8 @@ export interface iFormProvider {
 export interface iFormProviderValues {
   starValue: string | null;
   setStarValue: React.Dispatch<React.SetStateAction<string | null>>;
+  dataQuestions: iQuestions[] | undefined;
+  setDataQuestions: React.Dispatch<
+    React.SetStateAction<iQuestions[] | undefined>
+  >;
 }

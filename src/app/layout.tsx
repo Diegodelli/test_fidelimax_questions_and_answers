@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import "../styles/icones.css";
+import "../styles/form.css";
 
 import { RiMenu2Line } from "react-icons/ri";
 import InfoUser from "@/components/InfoUser";

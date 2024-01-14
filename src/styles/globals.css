@@ -14,11 +14,11 @@
 
 @layer components {
   .title-question {
-    @apply font-semibold font-customFont leading-7 text-2xl mb-5;
+    @apply font-semibold font-customFont leading-7 text-2xl mb-5 mt-3.5;
   }
 
   .description_question {
-    @apply font-customFont font-medium leading-5 mb-8;
+    @apply font-customFont font-medium leading-5 mb-3.5;
   }
 
   .btn-success,
@@ -37,6 +37,10 @@
 
   .btn-fake {
     @apply bg-yellow-500;
+  }
+
+  .style-radio {
+    @apply flex flex-col gap-4;
   }
 }
 
