@@ -1,3 +1,4 @@
+import { iResponse } from "@/interfaces";
 import axios from "axios";
 
 export const getApi = axios.create({
