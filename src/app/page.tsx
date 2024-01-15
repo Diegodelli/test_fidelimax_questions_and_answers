@@ -1,4 +1,5 @@
-import QuestionOfStarts from "@/components/QuestionOfStars";
+import Form from "@/components/Form";
+import StarQuestion from "@/components/StarQuestion";
 import { iResponse } from "@/interfaces";
 import { getApi } from "@/services/getApi";
 
@@ -15,9 +16,8 @@ export default async function Home() {
         </h2>
       </div>
       <section className="w-3/5 min-w-80 min-h-96 bg-gray-100 rounded-md p-5 flex flex-col">
-        <QuestionOfStarts
-          content1={stars[0].content}
-          mandatory1={stars[0].mandatory}
+        <StarQuestion content1={stars[0].content} />
+        <Form
           content2={stars[1].content}
           content3={stars[2].content}
           content4={stars[3].content}
@@ -25,7 +25,11 @@ export default async function Home() {
           content5={stars[4].content}
           itensRadioQuestion={stars[4].itens}
           content6={stars[5].content}
-          multipleChoice={stars[5].itens}
+          itensCheckRow={stars[5].itens}
+          content7={stars[6].content}
+          itensCheckCol={stars[6].itens}
+          content8={stars[7].content}
+          content8Exemplo={stars[7].answerValue}
         />
       </section>
     </main>

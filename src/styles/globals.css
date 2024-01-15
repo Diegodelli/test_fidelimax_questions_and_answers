@@ -18,7 +18,7 @@
   }
 
   .description_question {
-    @apply font-customFont font-medium leading-5 mb-3.5;
+    @apply font-customFont font-medium leading-5 mb-2;
   }
 
   .btn-success,
@@ -41,6 +41,10 @@
 
   .style-radio {
     @apply flex flex-col gap-4;
+  }
+
+  .error-form-text {
+    @apply text-red-800 text-sm -mt-1.5;
   }
 }
 

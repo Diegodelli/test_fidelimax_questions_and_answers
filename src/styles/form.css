@@ -21,14 +21,79 @@
   margin-bottom: 30px;
 }
 
-.checkbox {
+.sectionChecked {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  position: relative;
+
+  margin-bottom: 20px;
+}
+
+.checked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  cursor: pointer;
+}
+
+.checked .wrapper {
   display: inline-block;
 
-  padding: 5px 16px;
-
   width: 80px;
-  height: 25px;
+  height: 40px;
 
-  border-radius: 24px;
+  position: relative;
+
   border: 1px solid rgba(202, 200, 200, 0.803);
+
+  border-radius: 45px;
+
+  margin-right: 16px;
+
+  transition: 0.5 ease-in-out;
+}
+
+.checked .wrapper input {
+  opacity: 0;
+
+  width: 0;
+  height: 0;
+}
+
+.checked .wrapper span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 45px;
+
+  transition: 0.5 ease-in-out;
+}
+
+.checked input:checked + span {
+  background-color: #18794e;
+  color: #f2f4f8;
+
+  font-weight: 500;
+}
+
+.textearea-2 {
+  height: 200px;
+}
+
+.desc-header {
+  position: absolute;
+
+  top: 100px;
+  left: 45px;
 }

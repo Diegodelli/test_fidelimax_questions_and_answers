@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "../styles/globals.css";
-import "../styles/icones.css";
+import "../styles/iconeStars.css";
 import "../styles/form.css";
+import "../styles/modal.css";
+import "react-toastify/dist/ReactToastify.css";
 
 import { RiMenu2Line } from "react-icons/ri";
 import InfoUser from "@/components/InfoUser";
 import { FormProvider } from "@/context/formContext";
+import ModalFakePost from "@/components/ModalFakePost";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +29,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <FormProvider>
           <header className="bg-blue-900 h-80 px-4">
+            <span className="text-gray-200 customFont font-medium text-sm desc-header">
+              Pesquisa de Satisfação
+            </span>
             <div className="w-full h-20 flex justify-between items.center">
               <div className="flex flex-row items-center">
                 <RiMenu2Line className=" w-5 h-5 text-gray-200 mr-4" />{" "}
