@@ -37,7 +37,7 @@ export default function useStarEvent(callback: () => any) {
     return () => {
       document.removeEventListener("click", outClick);
     };
-  }, [callback]);
+  }, []);
 
   return ref;
 }
