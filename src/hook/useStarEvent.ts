@@ -5,7 +5,7 @@ import { useContext, useEffect, useRef } from "react";
 
 export default function useStarEvent(callback: () => any) {
   const ref = useRef<HTMLUListElement>(null);
-  const { setStarValue } = useContext(FormContext);
+  const { starValue, setStarValue } = useContext(FormContext);
 
   useEffect(() => {
     function outClick(event: MouseEvent) {
@@ -37,7 +37,7 @@ export default function useStarEvent(callback: () => any) {
     return () => {
       document.removeEventListener("click", outClick);
     };
-  }, []);
+  }, [callback]);
 
   return ref;
 }
