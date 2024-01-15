@@ -10,7 +10,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { RiMenu2Line } from "react-icons/ri";
 import InfoUser from "@/components/InfoUser";
 import { FormProvider } from "@/context/formContext";
-import ModalFakePost from "@/components/ModalFakePost";
 
 const inter = Inter({ subsets: ["latin"] });
 
