@@ -30,7 +30,6 @@ export const FormProvider = ({ children }: iFormProvider) => {
 
       const res = await postApi.post("/posts", body);
 
-      console.log(res.data);
       toast.success("Formulário fake enviado com sucesso!");
 
       setResQuestions(res.data);
